@@ -43,5 +43,3 @@ def square_root(a):
 def hypotenuse(a,b):
     return math.hypot(a,b)
 
-
-print("poo")
