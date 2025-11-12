@@ -33,6 +33,11 @@ class TestCalculator(unittest.TestCase):
     # def test_divide(self): # 3 assertions
     #     fill in code
     # ##########################
+    def test_divide(self):
+        from calculator import *
+        self.assertEqual(div(10, 2), 5)
+        self.assertEqual(div(-6, 3), -2)
+        self.assertEqual(div(5, 2), 2.5)
 
     ######## Partner 2
     # def test_divide_by_zero(self): # 1 assertion
@@ -70,8 +75,23 @@ class TestCalculator(unittest.TestCase):
     #     #     logarithm(0, 5)
     #     fill in code
 
+    def test_log_invalid_argument(self):
+        from calculator import *
+        with self.assertRaises(ValueError):
+            log(1, 10)
+        with self.assertRaises(ValueError):
+            log(-2, 8)
+        with self.assertRaises(ValueError):
+            log(2, -8)
+
     # def test_hypotenuse(self): # 3 assertions
     #     fill in code
+
+    def test_hypotenuse(self):
+        from calculator import *
+        self.assertAlmostEqual(hypotenuse(3, 4), 5.0)
+        self.assertAlmostEqual(hypotenuse(5, 12), 13.0)
+        self.assertAlmostEqual(hypotenuse(8, 15), 17.0)
 
     # def test_sqrt(self): # 3 assertions
     #     # Test for invalid argument, example:
@@ -80,6 +100,13 @@ class TestCalculator(unittest.TestCase):
     #     # Test basic function
     #     fill in code
     ##########################
+
+    def test_sqrt(self):
+        from calculator import *
+        self.assertAlmostEqual(square_root(9), 3.0)
+        self.assertAlmostEqual(square_root(16), 4.0)
+        with self.assertRaises(ValueError):
+            square_root(-4)
 
 # Do not touch this
 if __name__ == "__main__":
