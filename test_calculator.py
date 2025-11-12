@@ -1,3 +1,6 @@
+# https://github.com/wirbelj/lab11-PK-JW.git
+# Partner 1: Payton Keller
+# Partner 2: Josalyn Wirbel
 import unittest
 from calculator import *
 
