@@ -24,6 +24,12 @@ class TestCalculator(unittest.TestCase):
     # def test_multiply(self): # 3 assertions
     #     fill in code
 
+    def test_multiply(self):
+        from calculator import *
+        self.assertEqual(mul(2, 3), 6)
+        self.assertEqual(mul(-1, 5), -5)
+        self.assertEqual(mul(0, 100), 0)
+
     # def test_divide(self): # 3 assertions
     #     fill in code
     # ##########################
